@@ -1,0 +1,59 @@
+.swiper{
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	width: 80vw;
+	height: 250px;
+	padding: 18px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.swiper .img{
+	height: 250px;
+	width: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: width .6s;
+	background-color: #06c;
+	color: #FFFFFF;
+}
+
+.swiper .img:first-child{
+	width: 100%;
+}
+
+.swiperControl{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 30px;
+	padding: 3px 10px;
+	border-radius: 20px;
+	font-size: 0;
+	background-color: rgba(0,0,0,.3);
+}
+
+.swiperControl .dot{
+	display: inline-block;
+	margin: 0 6px;
+	width: 8px;
+	height: 8px;
+	border-radius: 6px;
+	background-color: rgba(255,255,255,.6);
+}
+
+.swiperControl .dot:hover{
+	background-color: rgba(255,255,255,.1);
+}
+
+.swiper .img:target{
+	width: 100%;
+}
+
+.swiper .img:not(:target){
+	width: 0;
+}
